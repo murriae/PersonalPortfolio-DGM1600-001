@@ -1,3 +1,36 @@
+html {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #dddddd;
+}  
+
 h1 {
     color: blue;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: rgb(9, 122, 156);
+}
+
+.nav {
+    display: flex;
+
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 1rem;
+    list-style-type: none;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
 }
