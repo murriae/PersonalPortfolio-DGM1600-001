@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--this is how you get the icons next to the different contact links in the footer-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <link href="index.css" rel="stylesheet" />
 
     <title>Abby's Portfolio</title>
   </head>
   <body>
-    <!--user story 6&7-->
+    <!--Navigation- user story 6&7-->
     <nav id="navbar">
       <ul class="nav-list">
         <li>
@@ -23,12 +30,16 @@
         </li>
       </ul>
     </nav>
-    <!--user story3-->
+    <!--About part of the site- user story3-->
     <section id="welcome-section">
-      <h1>Hey I am Abby,</h1>
-      <h4>a Web Developer</h4>
+      <h1>Hey I am Abby, <br />a Web Developer</h1>
+
+      <br />
+      <figure>
+        <img src="/images/kayak.jpg" />
+      </figure>
     </section>
-    <!--user story 4-->
+    <!--Projects- user story 4-->
     <section id="projects">
       <div class="projects-grid">
         <a class="project-tile" href="#">
@@ -40,7 +51,7 @@
         <a class="project-tile" href="#">
           <figure>
             <img src="/images/star-wars-resize.jpg" />
-            <figcaption>My caption goes here</figcaption>
+            <figcaption>Microsoft Power Virtual Agents</figcaption>
           </figure>
         </a>
         <a class="project-tile" href="#">
@@ -64,32 +75,44 @@
         <a class="project-tile" href="#">
           <figure>
             <img src="/images/star-wars-resize.jpg" />
-            <figcaption>My caption goes here</figcaption>
+            <figcaption class="figcaption">My caption goes here</figcaption>
           </figure>
         </a>
       </div>
     </section>
     <section id="contact">
-      <h1>Let's work together</h1>
-      <p>Contact me.</p>
+      <h1>Let's talk!</h1>
+      <p>Contact me:)</p>
       <div>
-        <!--looks weird-->
+        <!--looks weird--FIXED -->
         <a id="profile-link" href="https://github.com/murriae" target="_blank"
-          ><i class="fab fa-github-alt"></i>Github</a
+          ><i class="fab fa-github-alt"></i> Github</a
         >
-        <a id="profile-link" href="https://twitter.com/MurriAbby"
-          ><i class="fa fa-twitter">Twitter</i></a
+        <a
+          id="profile-link"
+          href="https://twitter.com/MurriAbby"
+          target="_blank"
+          ><i class="fab fa-twitter">Twitter</i></a
         >
-        <a id="profile-link" href="https://www.facebook.com/abby.murri.3"
-          ><i class="fas fa-at"></i>Facebook</a
+        <a
+          id="profile-link"
+          href="https://www.facebook.com/abby.murri.3"
+          target="_blank"
+          ><i class="fab fa-facebook-square"></i>Facebook</a
         >
-        <a id="profile-link" href="#"><i class="fas fa-mobile-alt"></i>Send an Email</a>
+        <a
+          id="profile-link"
+          href="https://www.linkedin.com/in/abbymurri/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"> </i>LinkedIn</a
+        >
       </div>
     </section>
     <footer>
-        <p>Created for DGM 1600 &copy; Abby Murri 2021</p>
+      <p>Created for DGM 1600 &copy; Abby Murri 2021</p>
     </footer>
   </body>
-  <!--user story 2-->
+  <!--Used to show the steps passed in the top left corner- user story 2-->
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

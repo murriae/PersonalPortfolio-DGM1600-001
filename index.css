@@ -6,37 +6,31 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+/* media quarry */
 @media (max-width: 1200px) {
     html {
-        font-size: 80%;
+        font-size: 75%;
     }
 }
 
 @media (max-width: 900px) {
     html {
-        font-size: 40%;
+        font-size: 45%;
     }
 }
 
 a {
     text-decoration: none;
-    color: #dddddd;
 }  
-
-h1 {
-    color: rgb(88, 102, 119);
-}
-
+/* navigation */
 #navbar {
     display: flex;
     position: fixed;
     justify-content: flex-end;
     width: 100%;
     background-color: rgb(226, 123, 140);
+    text-decoration: underline;
 }
-
-
 
 .nav-list {
     display: flex;
@@ -56,8 +50,9 @@ h1 {
     background-color: rgb(218, 99, 119);
 }
 
+/* Welcome Section */
 #welcome-section {
-    background-color: rgb(66, 165, 196);
+    background-color: rgb(114, 213, 243);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -66,12 +61,34 @@ h1 {
     font-size: 3rem;
 }
 
+#welcome-section h1 {
+    color: rgb(88, 102, 119);
+    background-color: rgb(241, 188, 138);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+  }
+
+#welcome-section h {
+    color:rgb(88, 102, 119);
+    background-color: rgb(240, 214, 191);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#welcome-section img {
+    height: 20rem;
+    width: 30rem;
+}
+
+/* Projects*/
 .projects-grid {
     padding: 4.5rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(250, 160, 150);
+}
+
+.projects-grid a:hover{
+    color: orange;
 }
 
 .project-tile {
@@ -84,45 +101,52 @@ figcaption {
     color: #555555;
 }
 
+
+/* Contact */
 #contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20rem;
-    background-color:rgb(88, 102, 119)
+    height: 30vh;
+    background-color:rgb(88, 102, 119);
+    
 }
 
 #contact h1 {
-    font-size: 4rem;
-    padding: 3rem 0;
-    color: white;
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 1.5rem 0;
+    color: ivory;
 }
 
 #contact p {
     font-size: xx-large;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    color:ivory;
 }
 
 #contact div {
     display: flex;
     justify-content: center;
-  padding-bottom: 4rem;
+    padding-bottom: 4rem;
   /* margin-bottom: 5rem; */
 }
 
 #contact div a {
   margin: 0 2rem;
   font-size: 2rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform .1s ease-out;
-  color: rgb(250, 160, 150);
+  color:rgb(24, 136, 228);
+  background-color: rgb(247, 176, 168);
+  transform: shadow;
 }
 
 #contact div a:hover {
-  transform: translateY(-8px);
+  transform: translateY(-3px);
 }
 
+/* Footer*/
 footer {
   display: flex;
   justify-content: center;
