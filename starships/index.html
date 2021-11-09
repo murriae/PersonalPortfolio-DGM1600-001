@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link href="style.css" rel="stylesheet"/>
+  <title>Star Wars Starships</title>
+</head>
+<body>
+  <header>
+    <h1>Starships of Star Wars</h1>
+  </header>
+  <main id="main">
+    <nav class="nav">
+      <ul class="navList"></ul>
+    </nav>
+    <section class="displaySection"></section>
+  </main>
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <h1 class="box missingMessage"></h1>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <footer>
+    <p>&copy; Thor Anderson Designs 2021</p>
+  </footer>
+<script src="sw-starships.js" type="module"></script>
+</body>
+</html>
