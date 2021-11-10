@@ -1,7 +1,9 @@
-import { people } from '../data/people.js'
-import { getLastNumber, removeChildren } from '../utils/index.js'
+import { people } from "../data/people.js";
+//import { getLastNumber, removeChildren } from '../utils/index.js'
 
-const mainContent = document.querySelector('#main')
+people.forEach((element) => console.log(element.name));
+
+/*const mainContent = document.querySelector('#main')
 
 const maleCharacters = people.filter((person) => person.gender === 'male')
 const femaleCharacters = people.filter((person) => person.gender === 'female')
@@ -47,4 +49,4 @@ function populateDOM(characters) {
     charFigure.appendChild(charCaption)
     mainContent.appendChild(charFigure)
   })
-}
+}*/

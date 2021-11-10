@@ -7,6 +7,10 @@ import {getLastNumber} from '../utils/index.js'
 
 let filmList = document.querySelector('#filmList')
 
+let myImg = document.createElement('img')
+myImg.src = 'https://starwars-visulaguid.com/assets/img/films/1.jpg'
+
+
 for (let i=0; i< films.length; i++) {
     let figure = document.createElement('figure')
   let figImg = document.createElement('img')
@@ -34,4 +38,3 @@ for (let i=0; i< films.length; i++) {
 
 console.log(filmList)
 
-filmList.textContent = "This is my content. Here is some more."

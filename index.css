@@ -69,7 +69,8 @@ a {
   }
 
 #welcome-section h {
-    color:rgb(88, 102, 119);
+    color:black;
+    /*rgb(88, 102, 119);*/
     background-color: rgb(240, 214, 191);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -84,7 +85,9 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(250, 160, 150);
+    background-color: rgb(109, 107, 107); 
+    /*rgb(250, 160, 150);*/
+
 }
 
 .projects-grid a:hover{
@@ -102,6 +105,23 @@ figcaption {
     color: #555555;
 }
 
+.profpic {
+    width: 500px;
+    height: 350px;
+}
+
+.pic {
+    width: 320px;
+    height: 213px;
+    
+    filter: drop-shadow(4px 4px 4px red) ;
+}
+
+a {
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration-line: underline;
+}
 
 /* Contact */
 #contact {
@@ -110,7 +130,8 @@ figcaption {
     justify-content: center;
     align-items: center;
     height: 30vh;
-    background-color:rgb(88, 102, 119);
+    background-color: black;
+    /*rgb(88, 102, 119);*/
     
 }
 
@@ -138,9 +159,11 @@ figcaption {
   margin: 0 2rem;
   font-size: 2rem;
   transition: transform .1s ease-out;
-  color:rgb(24, 136, 228);
-  background-color: rgb(247, 176, 168);
+  color:ivory;
+  /*rgb(24, 136, 228);
+  background-color: rgb(247, 176, 168);*/
   transform: shadow;
+  text-decoration: underline;
 }
 
 #contact div a:hover {
@@ -155,5 +178,5 @@ footer {
   padding: 1rem;
   background-color: rgb(98, 199, 199);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:rgb(88, 102, 119)
+  color:rgb(88, 102, 119);
 }

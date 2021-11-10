@@ -2,19 +2,45 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgb(221, 55, 55);
   }
   
   figure {
-    background-color: aqua;
+    background-color: black;
   }
   
   img {
-      border: 10px solid aqua;
+      border: 10px solid black;
+      filter: drop-shadow(12px 12px 12px rgb(59, 57, 57)) ;
   }
   
   figcaption {
     text-align: center;
     font-size: xx-large;
-    background-color: aqua;
+    background-color: ivory;
     padding-bottom: .5em;
+    
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    filter: drop-shadow(12px 12px 12px grey) ;
+
   }
+
+  header {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    background-color: ivory;
+  }
+
+  /* Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: rgb(98, 199, 199);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(88, 102, 119);
+}
