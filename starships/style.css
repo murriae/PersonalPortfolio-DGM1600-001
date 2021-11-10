@@ -1,12 +1,51 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
+    color:rgb(98, 199, 199);
+  }
+
+  /* navigation */
+  /* navigation */
+  #navbar {
+    display:-ms-inline-flexbox;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: rgb(221, 55, 55);
+    text-decoration: underline;
   }
   
-  header, footer {
-    font-family: 'Fruktur', cursive;
+.nav-list {
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+.nav-list a {
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  color:rgb(88, 102, 119)
+}
+
+.nav-list a:hover {
+  background-color: rgb(218, 99, 119);
+}
+  
+  header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursive;
+    font-size: xxx-large;
+    text-align: center;
+    font-style: bold;
+    text-decoration: underline;
+  }
+
+   footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursive;
     font-size: xx-large;
     text-align: center;
+    font-style: bold;
   }
   
   .nav {
@@ -15,17 +54,33 @@
   
   #main {
     display: flex;
+    font-style:rgb(85, 216, 216);
+   
   }
   
   section {
+    background-image: url("background.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    color:rgb(98, 199, 199);
   }
   
   .box {
-    background-color: bisque;
+    
     text-align: center;
     font-size: xx-large;
+    color:rgb(98, 199, 199);
   }
+
+  /* Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: rgb(98, 199, 199);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(88, 102, 119);
+}

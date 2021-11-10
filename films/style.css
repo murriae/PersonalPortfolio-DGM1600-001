@@ -4,6 +4,33 @@ main {
     justify-content: center;
     background-color: rgb(221, 55, 55);
   }
+
+  /* navigation */
+#navbar {
+  display:-ms-inline-flexbox;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: rgb(221, 55, 55);
+  text-decoration: underline;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+.nav-list a {
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 1rem;
+  color:rgb(88, 102, 119)
+}
+
+.nav-list a:hover {
+  background-color: rgb(218, 99, 119);
+}
   
   figure {
     background-color: black;

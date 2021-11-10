@@ -3,28 +3,63 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+    /* navigation */
+#navbar {
+  display:-ms-inline-flexbox;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: rgb(221, 55, 55);
+  text-decoration: underline;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
+}
+
+.nav-list a {
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 1rem;
+  color:rgb(88, 102, 119)
+}
+
+.nav-list a:hover {
+  background-color: rgb(218, 99, 119);
+}
   
   header {
     display: flex;
     justify-content: space-around;
-    background-color: #333;
+    background-color: rgb(55, 127, 221);
     padding: 2em 0;
   }
   
   button {
     font-size: x-large;
-    border-radius: 10px;
-    background-color: aqua;
+    border-radius: 40px;
+    background-color: rgb(221, 55, 55);
+    text-decoration: rgb(55, 127, 221); 
+    filter: drop-shadow(7px 7px 7px ivory) ;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
   }
   
   button:hover {
-    background-color: bisque;
+    background-color: rgb(152, 165, 194);
   }
   
   #main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(55, 127, 221);
+    
+    background-color: rgb(233, 225, 158);
   }
   
   figure {
@@ -33,8 +68,11 @@
   
   figure img {
     width: 200px;
+    filter: drop-shadow(7px 7px 7px rgb(55, 127, 221));
   }
   
   figcaption {
     text-align: center;
+    border-radius: 2px;
+    background-color: lightblue;
   }
