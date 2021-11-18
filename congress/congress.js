@@ -1,72 +1,76 @@
-import {senators} from '../data/senators.js'
-import{ representatives } from '../data/representatives.js'
+import { senators } from '../data/senators.js'
+import { representatives } from '../data/representatives.js'
 
-const members = [...senators, ...representatives]
+const members = [...senators, ...representatives] // modern combining arrays like a genus
 
 const senatorDiv = document.querySelector('.senators')
-const loyaltyHeading = document.querySelector('.mostLoyal')
 const seniorityHeading = document.querySelector('.seniority')
+const weaselOrderedList = document.querySelector('.weaselList')
 
-function SimplifiedMembers(chamberFilter) {
-  const filteredArray = members.filter((member) =>
-    chamberFilter ? member.short_title === chamberFilter : member,
-  )
+function simplifiedMembers(chamberFilter) {
+  const filteredArray = members.filter(member => chamberFilter ? member.short_title === chamberFilter : member)
 
-  return filteredArray.map((senator) => {
-    let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+  return filteredArray.map(senator => {
+    const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
     return {
       id: senator.id,
       name: `${senator.first_name}${middleName}${senator.last_name}`,
       party: senator.party,
+      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
       gender: senator.gender,
       seniority: +senator.seniority,
-      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
       missedVotesPct: senator.missed_votes_pct,
       loyaltyPct: senator.votes_with_party_pct,
     }
   })
 }
 
+populateSenatorDiv(simplifiedMembers())
+
 function populateSenatorDiv(simpleSenators) {
-  simpleSenators.forEach((senator) => {
-    const senFigure = document.createElement('figure')
-    const figImg = document.createElement('img')
-    const figCaption = document.createElement('figcaption')
+  simpleSenators.forEach(senator => {
+    let senFigure = document.createElement('figure')
+    let figImg = document.createElement('img')
+    let figCaption = document.createElement('figcaption')
 
     figImg.src = senator.imgURL
-    figCaption.textContent = senator.name
 
+    figCaption.textContent = senator.name
     senFigure.appendChild(figImg)
     senFigure.appendChild(figCaption)
     senatorDiv.appendChild(senFigure)
   })
 }
 
-//const filterSenators = (prop, value) => SimplifiedSenators().filter(senator => senator[prop] === value)
+//const filterSenators = (prop, value) => simplifiedSenators().filter(senator => senator[prop] === value)
+  
+//const republicans = filterSenators('party', 'R')
+//const femaleSenators = filterSenators('gender', 'F')
 
-//console.log(filterSenators('gender', 'F'))
+//console.log(republicans, femaleSenators)
 
-const mostSeniorMember = SimplifiedMembers().reduce((acc, senator) =>
-  acc.seniority > senator.seniority ? acc : senator,
-)
+const mostSeniorMember = simplifiedMembers().reduce((acc, senator) => {
+  return acc.seniority > senator.seniority ? acc : senator 
+})
 
-seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has been in congress for ${mostSeniorMember.seniority} years.`
+seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has taken our tax dollars as salary for more than ${mostSeniorMember.seniority} years!`
 
-const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
-  if (senator.loyaltyPct === 100) {
+const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
+  if(senator.loyaltyPct === 100) {
     acc.push(senator)
   }
   return acc
 }, [])
 
-const cowardList = document.createElement('ol')
+const biggestWeasel = simplifiedMembers().reduce((acc, senator) => 
+(acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator, {})
 
-const spineless = mostLoyal.map((coward) => {
+const biggestWeasels = simplifiedMembers().filter(senator => senator.missedVotesPct >= 50)
+
+console.log(biggestWeasels)
+
+biggestWeasels.forEach(weasel => {
   let listItem = document.createElement('li')
-  listItem.textContent = coward.name
-  cowardList.appendChild(listItem)
+  listItem.textContent = weasel.name
+  weaselOrderedList.appendChild(listItem)
 })
-
-loyaltyHeading.appendChild(cowardList)
-
-populateSenatorDiv(SimplifiedMembers())
