@@ -87,6 +87,7 @@ a {
     justify-content: center;
     background-color: rgb(109, 107, 107); 
     /*rgb(250, 160, 150);*/
+    
 
 }
 
@@ -103,6 +104,7 @@ figcaption {
     text-align: center;
     font-size: x-large;
     color: #555555;
+    padding: 1.5rem;
 }
 
 .profpic {
@@ -113,8 +115,11 @@ figcaption {
 .pic {
     width: 320px;
     height: 213px;
+    border-radius: 10px;
     
     filter: drop-shadow(4px 4px 4px red) ;
+    flex-direction: column;
+    margin: 1em;
 }
 
 a {
