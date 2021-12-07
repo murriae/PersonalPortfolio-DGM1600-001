@@ -1,170 +1,166 @@
-
 * {
-  margin: 0;  
-}   
+  margin: 0;
+}
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 /* media quarry */
 @media (max-width: 1200px) {
-    html {
-        font-size: 75%;
-    }
+  html {
+    font-size: 75%;
+  }
 }
 
 @media (max-width: 900px) {
-    html {
-        font-size: 45%;
-    }
+  html {
+    font-size: 45%;
+  }
 }
 
 a {
-    text-decoration: none;
-}  
+  text-decoration: none;
+}
 /* navigation */
 #navbar {
-    display: flex;
-    position: fixed;
-    justify-content: flex-end;
-    width: 100%;
-    background-color: rgb(226, 123, 140);
-    text-decoration: underline;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: rgb(226, 123, 140);
+  text-decoration: underline;
 }
 
 .nav-list {
-    display: flex;
-    margin-right: 1rem;
-    list-style-type: none;
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
 }
 
 .nav-list a {
-    padding: 1.5rem;
-    display: block;
-    font-size: 2.2rem;
-    padding: 2rem;
-    color:rgb(88, 102, 119)
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  color: rgb(88, 102, 119);
 }
 
 .nav-list a:hover {
-    background-color: rgb(218, 99, 119);
+  background-color: rgb(218, 99, 119);
 }
 
 /* Welcome Section */
 #welcome-section {
-    background-color: rgb(114, 213, 243);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+  background-color: rgb(114, 213, 243);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
 }
 
 #welcome-section h1 {
-    color: rgb(88, 102, 119);
-    background-color: rgb(241, 188, 138);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-  }
+  color: rgb(88, 102, 119);
+  background-color: rgb(241, 188, 138);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
 
 #welcome-section h {
-    color:black;
-    /*rgb(88, 102, 119);*/
-    background-color: rgb(240, 214, 191);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  /*rgb(88, 102, 119);*/
+  background-color: rgb(240, 214, 191);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #welcome-section img {
-    height: 20rem;
-    width: 30rem;
+  height: 20rem;
+  width: 30rem;
 }
 
 /* Projects*/
 .projects-grid {
-    padding: 4.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(109, 107, 107); 
-    /*rgb(250, 160, 150);*/
-    
-
+  padding: 4.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(109, 107, 107);
+  /*rgb(250, 160, 150);*/
 }
 
-.projects-grid a:hover{
-    color: rgb(0, 102, 255);
-    text-decoration: underline;
+.projects-grid a:hover {
+  color: rgb(0, 102, 255);
+  text-decoration: underline;
 }
 
 .project-tile {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 figcaption {
-    text-align: center;
-    font-size: x-large;
-    color: #555555;
-    padding: 1.5rem;
+  text-align: center;
+  font-size: x-large;
+  color: #555555;
+  padding: 1.5rem;
 }
 
 .profpic {
-    width: 500px;
-    height: 350px;
+  width: 500px;
+  height: 350px;
 }
 
 .pic {
-    width: 320px;
-    height: 213px;
-    border-radius: 10px;
-    
-    filter: drop-shadow(4px 4px 4px red) ;
-    flex-direction: column;
-    margin: 1em;
+  width: 320px;
+  height: 213px;
+  border-radius: 10px;
+
+  filter: drop-shadow(4px 4px 4px red);
+  flex-direction: column;
+  margin: 1em;
 }
 
 a {
-    color:black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration-line: underline;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration-line: underline;
 }
 
 /* Contact */
 #contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    background-color: black;
-    /*rgb(88, 102, 119);*/
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-color: black;
+  /*rgb(88, 102, 119);*/
 }
 
 #contact h1 {
-    font-size: 3rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding: 1.5rem 0;
-    color: ivory;
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 1.5rem 0;
+  color: ivory;
 }
 
 #contact p {
-    font-size: xx-large;
-    padding-bottom: 1.5rem;
-    color:ivory;
+  font-size: xx-large;
+  padding-bottom: 1.5rem;
+  color: ivory;
 }
 
 #contact div {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
   /* margin-bottom: 5rem; */
 }
 
 #contact div a {
   margin: 0 2rem;
   font-size: 2rem;
-  transition: transform .1s ease-out;
-  color:ivory;
+  transition: transform 0.1s ease-out;
+  color: ivory;
   /*rgb(24, 136, 228);
   background-color: rgb(247, 176, 168);*/
   transform: shadow;
@@ -182,6 +178,9 @@ footer {
   font-size: 1.5rem;
   padding: 1rem;
   background-color: rgb(98, 199, 199);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:rgb(88, 102, 119);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(88, 102, 119);
 }
+
+
