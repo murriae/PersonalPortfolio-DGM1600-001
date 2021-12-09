@@ -15,7 +15,7 @@ function getAPIData(url) {
  third, populatePokeCard with the returned pokemon data*/
 
 
-function loadPokemon(offset = 100, limit = 25) {
+function loadPokemon(offset = 0, limit = 25) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`,
   ).then(async (data) => {

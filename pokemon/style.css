@@ -93,7 +93,7 @@
     backface-visibility: hidden;
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: black;
     font-size: 1.5rem;
   }
   
@@ -112,6 +112,7 @@
 
   figcaption::first-letter {
     text-transform: capitalize;
-    font-size: 150%;
+    font-size: 100%;
     line-height: 3em;
+    
   }
