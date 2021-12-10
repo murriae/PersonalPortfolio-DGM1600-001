@@ -1,11 +1,16 @@
 * {
-    margin: 0;
+    
     box-sizing: border-box;
+   
   }
 
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
 }
   /* navigation */
   #navbar {
@@ -38,6 +43,7 @@
   /*body*/
   body {
     background-color: rgb(131, 224, 224);
+    
   }
 
   h1 {
@@ -58,7 +64,6 @@
     text-decoration: rgb(226, 224, 238); 
     filter: drop-shadow(7px 7px 7px ivory) ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    align-items: center;
      }
 
   .pokeGrid {
@@ -80,6 +85,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    
   }
   
   .card.is-flipped {
@@ -94,20 +100,26 @@
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border-color: black 1px;
   }
   
   .front {
     background: #2a75bb;
+    
   }
   
   .back {
     background: #e9910e;
     transform: rotateY(180deg);
+    
   }
   
   figure img {
     width: 200px;
+    filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
+   
   }
 
   figcaption::first-letter {
