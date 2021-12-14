@@ -8,7 +8,7 @@ function getAPIData(url) {
   }
 }
 
-function loadPokemon(offset = 0, limit = 49) {
+function loadPokemon(offset = 0, limit = 27) {
   getAPIData(
     `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`
   ).then(async (data) => {
