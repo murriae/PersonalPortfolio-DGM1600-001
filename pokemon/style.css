@@ -1,8 +1,11 @@
 * {
-    
+    margin: 0;
     box-sizing: border-box;
    
   }
+  
+  
+  
 
   html {
     box-sizing: border-box;
@@ -10,7 +13,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 50%;
+    width: 100%;
 }
   /* navigation */
   #navbar {
@@ -56,6 +59,16 @@
     margin: .5rem;
   }
 
+  h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(68, 117, 250);
+    background-color: White;
+    font-size: 2rem;
+    padding:1%;
+    margin: .5rem;
+  }
+
   button {
     font-size: x-large;
     border-radius: 40px;
@@ -65,6 +78,26 @@
     filter: drop-shadow(7px 7px 7px ivory) ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
      }
+
+  a.button {
+    /*-webkit-appearance: button;
+    -moz-appearance: button;*/
+    appearance: button;
+    
+
+    text-decoration: none;
+    color: initial;
+    font-size: xx-large;
+    padding: 5px;
+    margin: 1rem;
+    border-radius: 50px;
+    color: white;
+    background-color:orange;
+    text-decoration: orange;
+    filter: drop-shadow(7px 7px 7px ivory) ;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+}
 
   .pokeGrid {
     display: flex;
@@ -77,6 +110,7 @@
     perspective: 600px;
     margin: .5rem;
   }
+ 
   
   .card {
     width: 100%;
@@ -85,6 +119,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    
     
   }
   
@@ -100,8 +135,8 @@
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-    font-size: 1rem;
-    border-radius: 10px;
+    font-size: 1.2rem;
+    border-radius: 40px;
     border-color: black 1px;
   }
   
@@ -115,6 +150,12 @@
     transform: rotateY(180deg);
     
   }
+ 
+  
+  .video {
+    margin: 1.8rem 
+  }
+  
   
   figure img {
     width: 200px;
@@ -128,3 +169,95 @@
     line-height: 3em;
     
   }
+
+  .myForm fieldset {
+    border: 1px solid #43a0b6;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    background-color: #bee9f3;
+  }
+  
+  .myForm legend {
+    color:white;
+    font-size: 1.3rem;
+    background-color: #f78686;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+  
+  .myForm label {
+    margin: 1rem;
+  }
+  
+  .myForm label, .myForm select, .myForm [type=text],.myForm [type=tel], .myFrom textarea{
+    display: block;
+    color: #0c0fa1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+    
+  }
+
+  
+  .myForm [type=text], .myForm [type=tel], .myForm select, .myForm textarea{
+    border: solid 4px #e4c0b3;
+    padding: .3rem;
+    width: 250px;
+    border-radius:.3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    font-size: large;
+  }
+  
+  .myForm textarea {
+    height: 6rem;
+  }
+  
+  .myForm :required {
+    background-color: rgba(156,51,53,0.1);
+  }
+  
+  .myForm [type=submit] {
+    background-color: #024873;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+    margin: 1rem 0 0 1vw;
+    font-size:larger
+  }
+  
+  table.our-activities {
+    width: 100%;
+    border-collapse: collapse; 
+  }
+  table.our-activities th {
+     background-color: #43a0b6;
+     color: rgb(182, 180, 180);
+     padding: .8rem 2vw;
+     text-align: left;
+  }
+  table.our-activities td {
+     color: #024873;
+     padding: .5rem 2vw;
+  }
+  table.our-activities tr:nth-child(odd) {
+     background-color: #f78686;
+  }
+  
+  table.our-activities tr:hover {
+     background-color: #97e4dc;
+  }
+  
+  /* Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: rgb(98, 199, 199);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(88, 102, 119);
+}
+
+

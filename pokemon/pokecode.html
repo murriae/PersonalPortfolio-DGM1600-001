@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Pokemon Cards</title>
+  </head>
+  <body>
+    <!--Navigation- user story 6&7-->
+    <nav id="navbar">
+      <ul class="nav-list">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Join Our Exclusive Members Club</h1>
+        <h2>and win a free Pokemon stuffed animal today!!</h2>
+        <form method="get" class="myForm" action="thanks.html">
+            <fieldset>
+                <legend>Team Member Information</legend>
+                <label>
+                    "First Name*"
+                    <input type="text" name="fname" required>
+                </label>
+                <label>"Last Name*"
+                    <input type="text" name="lname" required>
+                </label>
+                <label>"Cell Number*"
+                    <input type="tel" name="phone" required placedholder="123-123-1234">
+                </label>
+                <label>
+                    "Email*"
+                    <input type="text" name="email" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Join Us:)</legend>
+                <label><input type="checkbox" name="method" value="event">Event Notifications</label>
+                <label><input type="checkbox" name="method" value="recipe">Pokemon Recipes</label>
+                <label><input type="checkbox" name="method" value="trip">Trips and Tournaments</label>
+            </fieldset>
+                <label>Comments
+                    <textarea name="comments"></textarea>
+                  </label>
+                  <input type="submit" value="Submit Survey">
+            
+
+        </form>
+        
+    </header>
+    <main>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bQB8scCtrKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="pokeGrid"></div>
+    </main>
+    <footer>
+        <p>Created for DGM 1600 &copy; Abby Murri 2021</p>
+      </footer>
+    <script src="pokecode.js" type="module"></script>
+  </body>
+</html>
