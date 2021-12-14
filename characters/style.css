@@ -2,6 +2,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    background-color: rgb(233, 225, 158);
   }
 
     /* navigation */
@@ -59,7 +60,7 @@
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(55, 127, 221);
     
-    background-color: rgb(233, 225, 158);
+    
   }
   
   figure {

@@ -33,3 +33,283 @@
   
     
 </html>
+
+import { senators } from "../data/senators.js";
+import { representatives } from "../data/representatives.js";
+
+const members = [...senators, ...representatives]; // modern combining
+console.log(members.length);
+
+const senatorDiv = document.querySelector(".senators");
+const seniorityHeading = document.querySelector(".seniority");
+const weaselOrderedList = document.querySelector(".weaselList");
+const loyaltyHeading = document.querySelector(".mostLoyal");
+
+function simplifiedMembers(chamberFilter) {
+  const filteredArray = members.filter((member) =>
+    chamberFilter ? member.short_title === chamberFilter : member,
+  );
+
+  return filteredArray.map((senator) => {
+    const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `;
+    return {
+      id: senator.id,
+      name: `${senator.first_name}${middleName}${senator.last_name}`,
+      party: senator.party,
+      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-100px.jpeg`,
+      gender: senator.gender,
+      seniority: +senator.seniority,
+      missedVotesPct: senator.missed_votes_pct,
+      loyaltyPct: senator.votes_with_party_pct,
+    };
+  });
+}
+
+populateSenatorDiv(simplifiedMembers());
+
+function populateSenatorDiv(simpleSenators) {
+  simpleSenators.forEach((senator) => {
+    let senFigure = document.createElement("figure");
+    let figImg = document.createElement("img");
+    let figCaption = document.createElement("figcaption");
+
+    figImg.src = senator.imgURL;
+
+    figCaption.textContent = senator.name;
+    senFigure.appendChild(figImg);
+    senFigure.appendChild(figCaption);
+    senatorDiv.appendChild(senFigure);
+  });
+}
+
+//
+//const filterSenators = (prop, value) => simplifiedSenators().filter(senator => senator[prop] === value)
+
+//const republicans = filterSenators('party', 'R')
+//const femaleSenators = filterSenators('gender', 'F')
+
+//console.log(republicans, femaleSenators)
+
+const mostSeniorMember = simplifiedMembers('Sen.').reduce((acc, senator) => {
+  return acc.seniority > senator.seniority ? acc : senator;
+});
+
+console.log(mostSeniorMember);
+
+seniorityHeading.textContent = `The most senior member of The Senate is ${mostSeniorMember.name} who has taken our tax dollars as salary for more than ${mostSeniorMember.seniority} years!`;
+
+const mostLoyal = simplifiedMembers().reduce((acc, senator) => {
+  if (senator.loyaltyPct === 100) {
+    acc.push(senator);
+  }
+  return acc;
+}, []);
+
+/*const cowardList = document.createElement("ol");
+
+const spineless = mostLoyal.map((coward) => {
+  let listItem = document.createElement("li");
+  listItem.textContent = coward.name;
+  cowardList.appendChild(listItem);
+});
+loyaltyHeading.appendChild(cowardList)
+loyaltyHeading.textContent =
+  "The most spineless of Congress who vote with their party 100% of the time are: ";
+console.log(mostLoyal);
+
+populateSenatorDiv(simplifiedMembers);
+*/
+const biggestWeasel = simplifiedMembers().reduce(
+  (acc, senator) =>
+    (acc.missedVotesPct || 0) > senator.missedVotesPct ? acc : senator,
+  {}
+);
+
+const biggestWeasels = simplifiedMembers().filter(
+  (senator) => senator.missedVotesPct >= 50
+);
+
+console.log(biggestWeasels);
+
+biggestWeasels.forEach((weasel) => {
+  let listItem = document.createElement("li");
+  listItem.textContent = weasel.name;
+  weaselOrderedList.appendChild(listItem);
+});
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link href="style.css" rel="stylesheet"/>-->
+  <title>People of Congress</title>
+</head>
+<body>
+   <!--Navigation- user story 6&7-->
+   <nav id="navbar">
+    <ul class="nav-list">
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+     
+    </ul>
+  </nav>
+  <header>
+    <div>
+    <h1>People of Congress</h1>
+   <br>
+    <div>
+      
+    </div>
+    <!--<button>Democrats</button>
+    <button>Representatives</button>
+    <button>Republicans</button>
+    <button>Senators</button>
+  -->
+    <ol class='seniority'>
+    </ol>
+  </div>
+  </header>
+  <main>
+    
+    <a class="map" href="map.html" class="button">Visit Congress</a>
+    <div class="senators">
+
+    </div>
+  </main>
+  <footer>
+    <h3>For Educational Purposes Only &copy; Abby Murri 2021</h3>
+  </footer>
+  <script src="congress.js" type="module"></script>
+</body>
+</html>-->
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: cadetblue;
+}
+/* navigation */
+#navbar {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: rgb(226, 123, 140);
+  text-decoration: underline;
+  }
+  
+  .nav-list {
+  display: flex;
+  margin-right: 1rem;
+  list-style-type: none;
+  }
+  
+  .nav-list a {
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  color:rgb(88, 102, 119)
+  }
+  .nav-list a:hover {
+  background-color: rgb(218, 99, 119);
+  }
+  
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: underline;
+  padding: 1.5rem;
+  display: block;
+  font-size: 2.2rem;
+  padding: 1rem;
+  color:rgb(88, 102, 119);
+  text-align: center;
+  
+  background-color: rgb(136, 149, 153);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  
+  }
+  .map {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aquamarine;
+    color:black;
+    padding: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+  border-color: black;
+  filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
+  text-align: center;
+  }
+  .senators {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  border-color: black;
+  filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
+  }
+  
+  figure {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    filter: drop-shadow(12px 12px 12px rgb(139, 38, 55)) ;
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+  
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+  
+  figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: rgb(58, 55, 55);
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: center;
+  }
+  
+    /* Footer*/
+  footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: rgb(98, 199, 199);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(9, 22, 37);
+  }
+  

@@ -1,124 +1,130 @@
-
 * {
-    margin: 0;
-    box-sizing: border-box;
-    background-color: cadetblue;
-  }
-  /* navigation */
-#navbar {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(116, 137, 138);
+}
+    /* navigation */
+    #navbar {
+      display:-ms-inline-flexbox;
+      justify-content: flex-end;
+      width: 100%;
+      background-color: rgb(221, 55, 55);
+      text-decoration: underline;
+    }
+    
+    .nav-list {
+      display: flex;
+      margin-right: 1rem;
+      list-style-type: none;
+    }
+    
+    .nav-list a {
+      padding: 1.5rem;
+      display: block;
+      font-size: 2.2rem;
+      padding: 1rem;
+      color:rgb(88, 102, 119)
+    }
+    
+    .nav-list a:hover {
+      background-color: rgb(218, 99, 119);
+    }
+
+.headCon {
   display: flex;
-  position: fixed;
-  justify-content: flex-end;
-  width: 100%;
-  background-color: rgb(226, 123, 140);
-  text-decoration: underline;
 }
 
-.nav-list {
-  display: flex;
-  margin-right: 1rem;
+h1{
+  text-align: center;
+  background-color: rgb(221, 55, 55);
+  text-decoration: rgb(55, 127, 221); 
+  padding: 1em;
+  
+}
+
+header {
+  align-items: center;
+  font-size: 1.7em;
+  background-color:#EBE0CD;;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+.seniority {
+  width: 50%;
+  color:  #476388;
+  background-color: #191c2F;
+  padding: 15%;
+  font-size: xx-large;
+  text-align: center;
+}
+
+
+.mostLoyal {
+  font-size: large;
+}
+li {
+  margin-top: .4em;
   list-style-type: none;
 }
-
-.nav-list a {
-  padding: 1.5rem;
-  display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
-  color:rgb(88, 102, 119)
-}
-.nav-list a:hover {
-  background-color: rgb(218, 99, 119);
-}
-
-  header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-decoration: underline;
-  padding: 1.5rem;
-  display: block;
-  font-size: 2.2rem;
-  padding: 1rem;
-  color:rgb(88, 102, 119);
-  text-align: center;
   
-  background-color: rgb(136, 149, 153);
-  height: 60vh;
+  button {
+    font-size: 1em;
+    padding: 1.5em;
+    width: 100%;
+    background-color: rgb(221, 55, 55);
+    text-decoration: rgb(55, 127, 221); 
+    border: none;
+    filter: drop-shadow(7px 7px 7px ivory) ;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  button:hover {
+    font-size: 1em;
+    padding: 1.5em;
+    width: 100%;
+    background-color: #EBE0CD;
+    color: rgb(22, 77, 196);
+    border: none;
+  }
+
+
+
+
+.senators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+figure {
+  width: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
+  margin: 1.5rem;
 
-  }
-  .map {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: aquamarine;
-    color:black;
-    padding: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
-  border-color: black;
-  filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
-  text-align: center;
-  }
-  .senators {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  border-color: black;
-  filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
-  }
+}
+figure img {
   
-  figure {
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    filter: drop-shadow(12px 12px 12px rgb(139, 38, 55)) ;
-    border-radius: 10px;
-    padding: 10px;
-    
-  }
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: blue;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  filter: drop-shadow(7px 7px 7px rgb(55, 127, 221));
 }
 
 figcaption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: rgb(58, 55, 55);
-  font-size: 20px;
-  text-decoration: underline;
   text-align: center;
+  border-radius: 2px;
+  background-color: lightblue;
 }
-
-    /* Footer*/
-footer {
-  display: flex;
-  justify-content: center;
-  font-size: 1.5rem;
-  padding: 1rem;
-  background-color: rgb(98, 199, 199);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:rgb(9, 22, 37);
-}
+  /* Footer*/
+  footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(98, 199, 199);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:rgb(9, 22, 37);
+    }

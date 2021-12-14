@@ -87,6 +87,16 @@
     text-decoration: rgb(226, 224, 238); 
     filter: drop-shadow(7px 7px 7px ivory) ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      padding: 1rem;
+      margin: 1rem;
+     }
+
+     button:hover {
+      background-color: #97e4dc;
      }
 
   a.button {
@@ -144,10 +154,11 @@
     backface-visibility: hidden;
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
-    font-size: 1.2rem;
+    color: rgb(44, 39, 39);
+    font-size: 1rem;
     border-radius: 40px;
     border-color: black 1px;
+    
   }
   
   .front {
