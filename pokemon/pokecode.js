@@ -189,7 +189,12 @@ function getPokeTypeColor(pokeType) {
         color = '#999999'
   }
   return color
+
+  
 }
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
 
 /*import { removeChildren } from '../utils/index.js'
 
@@ -931,3 +936,4 @@ function populateCardBack(pokemon) {
   pokeBack.appendChild(pokeWeight)
   return pokeBack
 }*/
+
