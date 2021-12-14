@@ -40,6 +40,15 @@
     font-style: bold;
     text-decoration: underline;
   }
+  .hero {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  border-color: black;
+  filter: drop-shadow(18px 18px 18px rgb(19, 3, 6)) ;
+}
 
    footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursive;
