@@ -1,0 +1,67 @@
+
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*body rules here*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/*header rules here*/
+header {
+    background-color: #e49217;
+    padding: 1rem 2%;
+    font-style: italic;
+}
+header h1{
+    margin: 0;
+}
+header h2{
+    margin:0;
+}
+
+
+/*navigation rules here*/
+nav {background-color: rgb(46, 44, 44);}
+nav ul {margin: 0; padding:0;}
+nav li{list-style-type: none;}
+nav li.active { background-color:rgb(82, 70, 51);}
+nav a {
+    display: block;
+    padding: .8rem; /*44 min height*/
+    color: #eee;
+    text-align: left;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgb(94, 83, 83);
+}
+
+/*main rules here*/
+main {
+    padding: 1rem 2%;
+    display: block;
+
+}
+
+main h1 {color: rgb(114, 82, 21);}
+
+main figure img{ width: 100%;}
+main figure{
+    width: 100%;
+    margin: 0;
+}
+
+main figcaption { text-align: center; font-size: .8rem;}
+
+footer {
+    text-align: center;
+    padding: 1rem 2%;
+    background-color: #e49217;
+}
